@@ -1,0 +1,21 @@
+<p>List of Categories:</p>
+
+<div style="width: 400px;">
+	<table border="1">
+		<thead>
+			<tr>
+				<td ng-click="sortBy('name')">Name</td>
+				<td ng-click="sortBy('category')">Category</td>
+				<td ng-click="sortBy('amount')">Amount</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in data | orderBy:key:reverse">
+				<td>{{row.name}}</td>
+				<td>{{row.category}}</td>
+				<td>{{row.amount}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
