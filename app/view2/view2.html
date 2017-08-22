@@ -1,4 +1,11 @@
 <p>
-  <span>name</span>
-
+	<span>name</span>
+	<span ng-repeat="category in categories">{{category}}</span>
+	<br/>
+	<div ng-repeat="name in names">
+		<span>&nbsp;&nbsp;&nbsp;{{name}}</span>
+		<span>{{finalObj[categories[0]][name] || '--'}}</span>
+		<span>{{finalObj[categories[1]][name] || '--'}}</span>
+		<span>{{finalObj[categories[2]][name] || '--'}}</span>
+	</div>
 </p>
